@@ -5,5 +5,7 @@
     <Hero />
     <About />
     <Partners />
+    <Info />
+    <TCE />
   </div>
 </template>

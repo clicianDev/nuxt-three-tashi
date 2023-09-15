@@ -23,7 +23,7 @@
           <a href="https://nes.tech" target="_blank">
             <img
               alt="NEST"
-              src="images/logos/partners/nest.webp"
+              src="images/logos/partners/nest.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
