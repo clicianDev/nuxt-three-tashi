@@ -177,14 +177,14 @@ const animationLoop = () => {
 
   particlesMesh.rotation.y = -0.05 * elapsedTime
 
-  if (mouseX > 0 || mouseY > 0) {
-    particlesMesh.rotation.y = -mouseY * (elapsedTime * 0.00005)
-    particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00005)
-  }
+  // if (mouseX > 0 || mouseY > 0) {
+  //   particlesMesh.rotation.y = -mouseY * (elapsedTime * 0.00005)
+  //   particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00005)
+  // }
 
-  if (mouseX > 0 || mouseY > 0) {
-    model.rotation.y = -mouseY * (elapsedTime * 0.00001)
-  }
+  // if (mouseX > 0 || mouseY > 0) {
+  //   model.rotation.y = -mouseY * (elapsedTime * 0.00001)
+  // }
 
   // Update the animation mixer with the delta time
   if (mixer) {
