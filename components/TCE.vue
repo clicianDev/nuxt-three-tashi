@@ -37,7 +37,7 @@
             >
               <img
                 class="scale-100 h-64 xs:h-full rotate-90 xs:rotate-0 xs:scale-50 md:scale-75 lg:scale-90 xl:scale-100"
-                src="images/tce/tce-graph.svg"
+                src="/images/tce/tce-graph.svg"
               />
             </div>
           </div>
@@ -45,7 +45,7 @@
       </div>
       <!-- TOP SVG -->
       <div class="flex items-center justify-center mx-auto max-w-7xl">
-        <img class="-mb-[1px] -mt-48 xs:-mt-0 mask" src="images/tce/tce-top.svg" />
+        <img class="-mb-[1px] -mt-48 xs:-mt-0 mask" src="/images/tce/tce-top.svg" />
       </div>
       <!-- SPEED INFO -->
       <div class="flex flex-col items-center justify-center bg-tashi-blackish">
@@ -98,7 +98,7 @@
 
       <!-- BOTTOM SVG -->
       <div class="flex items-center justify-center mx-auto max-w-7xl">
-        <img class="-mt-[1px] mask" src="images/tce/tce-bottom.svg" />
+        <img class="-mt-[1px] mask" src="/images/tce/tce-bottom.svg" />
       </div>
     </div>
   </section>

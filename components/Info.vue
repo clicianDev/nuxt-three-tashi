@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- TASHI LOGO -->
       <div class="flex items-center mx-auto max-w-2xl h-20 sm:h-32 lg:h-40">
-        <img class="mx-auto h-16 sm:h-20 lg:h-24" src="images/logos/logo.svg" type="image/svg+xml" alt="TASHI Logo" />
+        <img class="mx-auto h-16 sm:h-20 lg:h-24" src="/images/logos/logo.svg" type="image/svg+xml" alt="TASHI Logo" />
       </div>
       <!-- COMPONENTS LIST -->
       <ul

@@ -10,7 +10,7 @@
           <a href="https://azure.microsoft.com" target="_blank">
             <img
               alt="Microsoft Azure"
-              src="images/logos/partners/azure.svg"
+              src="/images/logos/partners/azure.svg"
               decoding="async"
               data-nimg="1"
               class="h-28"
@@ -23,7 +23,7 @@
           <a href="https://nes.tech" target="_blank">
             <img
               alt="NEST"
-              src="images/logos/partners/nest.svg"
+              src="/images/logos/partners/nest.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -36,7 +36,7 @@
           <a href="https://bridgeportasia.com" target="_blank">
             <img
               alt="Bridgeport"
-              src="images/logos/partners/bridgeport.svg"
+              src="/images/logos/partners/bridgeport.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -49,7 +49,7 @@
           <a href="https://en.idreamsky.com" target="_blank">
             <img
               alt="iDreamSky"
-              src="images/logos/partners/idreamsky.svg"
+              src="/images/logos/partners/idreamsky.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -62,7 +62,7 @@
           <a href="https://web3.foundation" target="_blank">
             <img
               alt="Web3 Foundation"
-              src="images/logos/partners/web3-foundation.svg"
+              src="/images/logos/partners/web3-foundation.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -75,7 +75,7 @@
           <a href="https://launchbadge.com" target="_blank">
             <img
               alt="LaunchBadge"
-              src="images/logos/partners/launchbadge.svg"
+              src="/images/logos/partners/launchbadge.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -88,7 +88,7 @@
           <a href="https://foundation.rust-lang.org/" target="_blank">
             <img
               alt="Rust Foundation"
-              src="images/logos/partners/rust-foundation.svg"
+              src="/images/logos/partners/rust-foundation.svg"
               decoding="async"
               data-nimg="1"
               class="h-16"
@@ -101,7 +101,7 @@
           <a href="https://www.parity.io/" target="_blank" />
           <img
             alt="Parity"
-            src="images/logos/partners/parity.svg"
+            src="/images/logos/partners/parity.svg"
             decoding="async"
             data-nimg="1"
             class="h-16"

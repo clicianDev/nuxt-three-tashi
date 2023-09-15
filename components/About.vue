@@ -48,7 +48,7 @@
               <div
                 class="hidden lg:block lg:absolute bottom-12 right-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#FFB4137A] via-transparent to-transparent"
               ></div>
-              <img class="scale-50 sm:scale-75" src="images/icons/lower-cost.svg" alt="Lower Cost" />
+              <img class="scale-50 sm:scale-75" src="/images/icons/lower-cost.svg" alt="Lower Cost" />
               <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
                 Lower Cost
               </h4>
@@ -60,7 +60,7 @@
               <div
                 class="hidden lg:block lg:absolute bottom-12 right-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#44c1ff87] via-transparent to-transparent"
               ></div>
-              <img class="scale-50 sm:scale-75" src="images/icons/reduced-cheating.svg" alt="Reduce Cheating" />
+              <img class="scale-50 sm:scale-75" src="/images/icons/reduced-cheating.svg" alt="Reduce Cheating" />
               <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
                 Reduce Cheating
               </h4>
@@ -74,7 +74,7 @@
               ></div>
               <img
                 class="scale-50 sm:scale-75"
-                src="images/icons/simple-game-architecture.svg"
+                src="/images/icons/simple-game-architecture.svg"
                 alt="Simple Game Architecture"
               />
               <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
@@ -88,7 +88,7 @@
               <div
                 class="hidden lg:block lg:absolute bottom-12 left-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#31f5997a] via-transparent to-transparent"
               ></div>
-              <img class="scale-50 sm:scale-75" src="images/icons/fast-and-secure.svg" alt="Fast & Secure" />
+              <img class="scale-50 sm:scale-75" src="/images/icons/fast-and-secure.svg" alt="Fast & Secure" />
               <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
                 Fast & Secure
               </h4>
