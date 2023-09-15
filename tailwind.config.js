@@ -15,9 +15,11 @@ module.exports = {
       },
       colors: {
         tashi: {
-          background: '#030014',
+          background: '#202327',
           primary: '#798BFF',
           secondary: '#A9AFBF',
+          cyan: '#8EFFFF',
+          purple: '#CF01F2',
           contrast: {
             100: '#27153EFF',
             90: '#27153EE6',

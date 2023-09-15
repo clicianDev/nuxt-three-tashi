@@ -48,50 +48,54 @@
         <img class="-mb-[1px] -mt-48 xs:-mt-0 mask" src="/images/tce/tce-top.svg" />
       </div>
       <!-- SPEED INFO -->
-      <div class="flex flex-col items-center justify-center bg-tashi-blackish">
+      <div class="flex flex-col items-center justify-center bg-tashi-cyan">
         <div class="font-poppins font-light text-tashi-primary text-lg md:text-xl lg:text-2xl text-center">
           Interactive
         </div>
         <div
-          class="mt-6 font-poppins font-semibold text-tashi-white-100 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center"
+          class="mt-6 font-poppins font-semibold text-tashi-contrast-100 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center"
         >
           Make a Difference: Test and Choose Locations
         </div>
         <div class="mt-12 flex flex-row justify-center gap-12 lg:gap-36">
           <div class="flex flex-col justify-center items-center gap-4">
             <p
-              class="font-poppins font-semibold text-tashi-white-100 text-xl md:text-2xl lg:text-3xl text-center"
+              class="font-poppins font-semibold text-tashi-contrast-100 text-xl md:text-2xl lg:text-3xl text-center"
               id="gamevents"
             >
               -
             </p>
-            <p class="font-poppins font-extralight text-tashi-white-100 text-base text-center">
+            <p class="font-poppins font-extralight text-tashi-contrast-100 text-base text-center">
               Game events per second
             </p>
           </div>
           <div class="flex flex-col justify-center items-center gap-4">
             <p
-              class="font-poppins font-semibold text-tashi-white-100 text-xl md:text-2xl lg:text-3xl text-center"
+              class="font-poppins font-semibold text-tashi-contrast-100 text-xl md:text-2xl lg:text-3xl text-center"
               id="latency"
             >
               -
             </p>
-            <p class="font-poppins font-extralight text-tashi-white-100 text-base text-center">Latency</p>
+            <p class="font-poppins font-extralight text-tashi-contrast-100 text-base text-center">Latency</p>
           </div>
           <div class="flex flex-col justify-center items-center gap-4">
             <p
-              class="font-poppins font-semibold text-tashi-white-100 text-xl md:text-2xl lg:text-3xl text-center"
+              class="font-poppins font-semibold text-tashi-contrast-100 text-xl md:text-2xl lg:text-3xl text-center"
               id="numofplayers"
             >
               0
             </p>
-            <p class="font-poppins font-extralight text-tashi-white-100 text-base text-center">Number of players</p>
+            <p class="font-poppins font-extralight text-tashi-contrast-100 text-base text-center">Number of players</p>
           </div>
         </div>
 
         <div class="w-full mx-auto max-w-7xl">
-          <div class="bg-tashi-blackish flex items-center justify-center">
-            <div id="latency-map-container" class="w-full h-full mx-12 -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16"></div>
+          <div class="bg-tashi-cyan flex items-center justify-center">
+            <div class="w-full h-full mx-12 -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16">
+              <ClientOnly>
+                <Earth />
+              </ClientOnly>
+            </div>
           </div>
         </div>
       </div>

@@ -7,5 +7,6 @@
     <Partners />
     <Info />
     <TCE />
+    <Features />
   </div>
 </template>
