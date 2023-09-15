@@ -1,6 +1,6 @@
 {
-  "name": "nuxt-threejs-magic",
-  "author": "Alvaro Saburido <hola@alvarosaburido.dev> (https://github.com/alvarosabu/)",
+  "name": "Tashi",
+  "author": "Tashi Developer",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
