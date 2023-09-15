@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_72337" data-name="Rectangle 72337" width="20" height="20" transform="translate(215 211)" fill="#8593e8" stroke="#8593e8" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_43439" data-name="Mask Group 43439" transform="translate(-215 -211)" clip-path="url(#clip-path)">
+    <path id="location-pin-svgrepo-com" d="M10.072-.007A7.7,7.7,0,0,0,2.5,7.621c0,4.331,4.025,8.761,6.731,11.874a1.529,1.529,0,0,0,.987.5h.048a1.518,1.518,0,0,0,.984-.5c2.54-2.92,6.25-7.736,6.25-11.874S14.792-.007,10.072-.007Zm.251,18.663a.758.758,0,0,1-.082.067.761.761,0,0,1-.083-.067L9.83,18.28C7.264,15.336,3.749,11.3,3.749,7.62a6.435,6.435,0,0,1,6.321-6.378c4.268,0,6.179,3.2,6.179,6.378,0,2.8-2,6.51-5.928,11.036Zm-.3-14.879a3.75,3.75,0,1,0,3.75,3.75,3.75,3.75,0,0,0-3.75-3.75Zm0,6.25A2.551,2.551,0,0,1,7.493,7.5a2.5,2.5,0,1,1,2.529,2.528Z" transform="translate(215 211.007)" fill="#8593e8"/>
+  </g>
+</svg>

@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-bg {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #333;
+  background-image: linear-gradient(rgba(0, 255, 0, 0.7) 0.1em, transparent 0.1em),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.7) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+}
+
+@layer utilities {
+  .tashi-nav-link {
+    @apply font-poppins font-normal text-lg text-tashi-contrast-50 transition-colors delay-150 hover:text-tashi-contrast-100 hover:delay-[0ms];
+  }
+
+  .tashi-nav-social-media {
+    @apply opacity-70 transition-opacity delay-150 hover:opacity-100 hover:delay-[0ms];
+  }
+
+  .tashi-nav-link-mobile {
+    @apply font-poppins text-base leading-8 tracking-tight text-tashi-contrast-50 transition-colors delay-150 hover:text-tashi-contrast-100 hover:delay-[0ms];
+  }
+
+  .tashi-nav-link-footer {
+    @apply font-poppins text-tashi-contrast-50 transition-colors delay-150 hover:text-tashi-contrast-100 hover:delay-[0ms];
+  }
+
+  .tashi-nav-social-media-footer {
+    @apply opacity-70 transition-opacity hover:opacity-100;
+  }
+
+  .tashi-component-card {
+    @apply border-l-2 border-tashi-primary;
+  }
+
+  .tashi-component-card-title {
+    @apply font-poppins font-bold text-xl sm:text-2xl text-tashi-contrast-100;
+  }
+
+  .tashi-component-card-text {
+    @apply font-poppins text-xs sm:text-base text-justify sm:text-left tracking-tight text-tashi-contrast-100;
+  }
+
+  .tashi-text-stroke {
+    -webkit-text-stroke: 0.84px #20ffff;
+  }
+
+  .tashi-section-title {
+    @apply tashi-text-stroke text-[3.5rem] sm:text-[5.5rem] md:text-[7rem] lg:text-[9rem] font-poppins font-extrabold uppercase sm:truncate text-transparent;
+  }
+
+  .tashi-section-subtitle {
+    @apply font-poppins font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl text-tashi-white-100;
+  }
+
+  .tashi-section-subtitle-container {
+    @apply absolute z-10 flex justify-start items-end top-[42px] left-9 sm:top-[73px] sm:left-12 md:top-[95px] md:left-16 lg:top-[126px] lg:left-20;
+  }
+
+  .our-team-background-gradient {
+    background: conic-gradient(
+      from 165.21deg at 42.21% 100%,
+      rgba(252, 80, 235, 0.25) 0deg,
+      rgba(57, 212, 255, 0.25) 360deg
+    );
+  }
+}
+
+.popup-map {
+  background: linear-gradient(111.02deg, rgba(255, 255, 255, 0.5) 0.9%, rgba(255, 255, 255, 0) 124.58%);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+}
+
+.selected_bubble {
+  fill: rgb(59 130 246) !important;
+}
+.notselected_bubble,
+.datamaps-buble {
+  fill: #02e7ec !important;
+}
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins'), url(fonts/Poppins-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 400;
+  src: local('Poppins'), url(fonts/Poppins-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 250;
+  src: local('Poppins'), url(fonts/Poppins-Thin.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 250;
+  src: local('Poppins'), url(fonts/Poppins-ThinItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 275;
+  src: local('Poppins'), url(fonts/Poppins-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 275;
+  src: local('Poppins'), url(fonts/Poppins-ExtraLightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins'), url(fonts/Poppins-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 300;
+  src: local('Poppins'), url(fonts/Poppins-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins'), url(fonts/Poppins-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 500;
+  src: local('Poppins'), url(fonts/Poppins-MediumItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins'), url(fonts/Poppins-SemiBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 600;
+  src: local('Poppins'), url(fonts/Poppins-SemiBoldItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins'), url(fonts/Poppins-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 700;
+  src: local('Poppins'), url(fonts/Poppins-BoldItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 800;
+  src: local('Poppins'), url(fonts/Poppins-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 800;
+  src: local('Poppins'), url(fonts/Poppins-ExtraBoldItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 900;
+  src: local('Poppins'), url(fonts/Poppins-Black.woff) format('woff');
+}
+
+@font-face {
+  font-family: poppins;
+  font-style: italic;
+  font-weight: 900;
+  src: local('Poppins'), url(fonts/Poppins-BlackItalic.woff) format('woff');
+}
