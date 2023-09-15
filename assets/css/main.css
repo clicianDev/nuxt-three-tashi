@@ -211,3 +211,7 @@
   font-weight: 900;
   src: local('Poppins'), url(fonts/Poppins-BlackItalic.woff) format('woff');
 }
+
+.mask {
+  filter: drop-shadow(0 0 2rem rgb(142, 255, 255));
+}
