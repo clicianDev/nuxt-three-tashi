@@ -5,7 +5,7 @@
   <defs>
     <linearGradient id="paint0_linear_2435_660" x1="800.5" y1="55.771" x2="800.5" y2="713.898" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, 1, -1, 477)">
       <stop stop-color="white" stop-opacity="0.03"/>
-      <stop offset="1" stop-color="#8EFFFF"/>
+      <stop offset="1" stop-color="#CF01F2"/>
     </linearGradient>
     <linearGradient id="paint0_linear_2432_752" x1="35.5" y1="0.770874" x2="35.5" y2="575.135" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, 1, 764, 0)">
       <stop/>
@@ -15,7 +15,7 @@
     </linearGradient>
     <linearGradient id="gradient-1" x1="800.5" y1="55.771" x2="800.5" y2="713.898" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, 1, -1, 477)">
       <stop stop-color="white" stop-opacity="0.03"/>
-      <stop offset="1" stop-color="#8EFFFF"/>
+      <stop offset="1" stop-color="#CF01F2"/>
     </linearGradient>
   </defs>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M 767.621 2342.23 C 761.662 2332.78 758.5 2321.84 758.5 2310.67 C 758.5 2268.04 541.43 2182.77 -2 2182.77 L 1601 2182.77 C 1055.17 2182.77 840.5 2266.46 840.5 2310.67 C 840.5 2321.84 837.338 2332.78 831.379 2342.23 L 803.729 2386.07 C 801.767 2389.18 797.233 2389.18 795.271 2386.07 L 767.621 2342.23 Z" fill="url(#gradient-1)" style=""/>

@@ -48,7 +48,7 @@
         <img class="-mb-[1px] -mt-48 xs:-mt-0 mask" src="/images/tce/tce-top.svg" />
       </div>
       <!-- SPEED INFO -->
-      <div class="flex flex-col items-center justify-center bg-tashi-cyan">
+      <div class="flex flex-col items-center justify-center bg-tashi-purple">
         <div class="font-poppins font-light text-tashi-primary text-lg md:text-xl lg:text-2xl text-center">
           Interactive
         </div>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="w-full mx-auto max-w-7xl">
-          <div class="bg-tashi-cyan flex items-center justify-center">
+          <div class="bg-tashi-purple flex items-center justify-center">
             <div class="w-full h-full mx-12 -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16">
               <ClientOnly>
                 <Earth />
