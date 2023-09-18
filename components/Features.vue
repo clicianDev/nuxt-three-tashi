@@ -16,7 +16,7 @@
           class="relative grid grid-cols-12 lg:flex lg:flex-col max-w-7xl items-center justify-center lg:items-start lg:justify-start w-4/5 lg:w-80 p-1 sm:p-2 md:p-4 lg:p-12 my-2 lg:my-12 rounded-xl transition-all duration-300 hover:shadow-2xl hover:border-2"
         >
           <div class="text-justify items-center lg:items-start justify-center flex flex-col col-span-3">
-            <img class="scale-75 md:scale-90 lg:scale-100" src="images/icons/objective.svg" />
+            <img class="scale-75 md:scale-90 lg:scale-100" src="/images/icons/objective.svg" />
             <div
               class="mt-1 sm:mt-3 md:mt-4 lg:mt-6 font-poppins font-extrabold text-base md:text-xl lg:text-2xl uppercase"
             >
@@ -36,7 +36,7 @@
           class="relative grid grid-cols-12 lg:flex lg:flex-col max-w-7xl items-center justify-center lg:items-start lg:justify-start w-4/5 lg:w-80 p-1 sm:p-2 md:p-4 lg:p-12 my-2 lg:my-12 rounded-xl transition-all duration-300 hover:shadow-2xl hover:border-2"
         >
           <div class="text-justify items-center lg:items-start justify-center flex flex-col col-span-3">
-            <img class="scale-75 md:scale-90 lg:scale-100" src="images/icons/circuit.svg" />
+            <img class="scale-75 md:scale-90 lg:scale-100" src="/images/icons/circuit.svg" />
             <div
               class="mt-1 sm:mt-3 md:mt-4 lg:mt-6 font-poppins font-extrabold text-base md:text-xl lg:text-2xl uppercase"
             >
@@ -55,7 +55,7 @@
           class="relative grid grid-cols-12 lg:flex lg:flex-col max-w-7xl items-center justify-center lg:items-start lg:justify-start w-4/5 lg:w-80 p-1 sm:p-2 md:p-4 lg:p-12 my-2 lg:my-12 rounded-xl transition-all duration-300 hover:shadow-2xl hover:border-2"
         >
           <div class="text-justify items-center lg:items-start justify-center flex flex-col col-span-3">
-            <img class="scale-75 md:scale-90 lg:scale-100" src="images/icons/smartphone.svg" />
+            <img class="scale-75 md:scale-90 lg:scale-100" src="/images/icons/smartphone.svg" />
             <div
               class="mt-1 sm:mt-3 md:mt-4 lg:mt-6 font-poppins font-extrabold text-base md:text-xl lg:text-2xl uppercase"
             >
