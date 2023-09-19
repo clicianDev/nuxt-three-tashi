@@ -26,8 +26,8 @@ scene.add(pointLight)
 scene.add(pointLight2)
 scene.add(new AmbientLight(0xff68ff))
 
-const camera = new PerspectiveCamera(55, aspectRatio.value, 0.1, 1000)
-camera.position.set(8, 4, 8)
+const camera = new PerspectiveCamera(75, aspectRatio.value, 0.1, 1000)
+camera.position.set(4, 4, 4)
 scene.add(camera)
 
 const dracoLoader = new DRACOLoader()
@@ -90,6 +90,8 @@ const animationLoop = () => {
   controls.update()
   updateRenderer()
   requestAnimationFrame(animationLoop)
+  console.log('earth', camera.position)
+  model.rotation.y += 0.01
 }
 </script>
 <template>

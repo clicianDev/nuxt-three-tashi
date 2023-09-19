@@ -101,7 +101,7 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 let model: any
-gltfLoader.load('tashi-server/tashi-server.gltf', gltf => {
+gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
   model = gltf.scene
   position = model.position.set(-4, 2.5, 2)
   scene.add(model)
