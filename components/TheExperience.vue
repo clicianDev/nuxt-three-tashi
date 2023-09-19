@@ -139,7 +139,7 @@ function setRenderer() {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.enableZoom = false
-    controls.enableRotate = true
+    controls.enableRotate = false
 
     updateRenderer()
   }
@@ -198,6 +198,7 @@ const animationLoop = () => {
 </script>
 <template>
   <div>
+    <div class="glow-cyan p-10 absolute w-1/3 h-1/3 left-1/2 top-1/2">aaa</div>
     <canvas ref="experience" />
   </div>
 </template>

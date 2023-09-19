@@ -1,9 +1,5 @@
 <template>
-  <section
-    id="tashi-partners"
-    class="flex justify-center lg:mt-24"
-    aria-label="TASHI Partner organizations and companies."
-  >
+  <section id="tashi-partners" class="flex justify-center" aria-label="TASHI Partner organizations and companies.">
     <div>
       <ul role="list" class="mx-auto max-w-7xl my-8 flex flex-wrap items-center justify-center gap-8">
         <li class="flex">

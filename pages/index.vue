@@ -3,10 +3,10 @@
   <div class="page">
     <Navbar />
     <Hero />
-    <About />
     <Partners />
+    <About />
+
     <Info />
-    <TCE />
-    <Features />
+    <Map />
   </div>
 </template>

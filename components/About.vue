@@ -43,31 +43,31 @@
             ></div>
             <!-- Lower Cost -->
             <div
-              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-4 lg:ml-2 shadow-xl lg:shadow-2xl bg-gradient-to-br from-tashi-smoke via-tashi-ash to-tashi-white-100"
+              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-4 lg:ml-2 shadow-xl lg:shadow-2xl card-yellow"
             >
               <div
                 class="hidden lg:block lg:absolute bottom-12 right-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#FFB4137A] via-transparent to-transparent"
               ></div>
               <img class="scale-50 sm:scale-75" src="/images/icons/lower-cost.svg" alt="Lower Cost" />
-              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
+              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-white-100 text-center">
                 Lower Cost
               </h4>
             </div>
             <!-- Reduce Cheating -->
             <div
-              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-48 lg:ml-16 shadow-xl lg:shadow-2xl bg-gradient-to-br from-tashi-smoke via-tashi-ash to-tashi-white-100"
+              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-48 lg:ml-16 shadow-xl lg:shadow-2xl card-blue"
             >
               <div
                 class="hidden lg:block lg:absolute bottom-12 right-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#44c1ff87] via-transparent to-transparent"
               ></div>
               <img class="scale-50 sm:scale-75" src="/images/icons/reduced-cheating.svg" alt="Reduce Cheating" />
-              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
+              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-white-100 text-center">
                 Reduce Cheating
               </h4>
             </div>
             <!-- Simple Game Architecture -->
             <div
-              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-12 lg:ml-64 shadow-xl lg:shadow-2xl bg-gradient-to-br from-tashi-smoke via-tashi-ash to-tashi-white-100"
+              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-12 lg:ml-64 shadow-xl lg:shadow-2xl card-orange"
             >
               <div
                 class="hidden lg:block lg:absolute bottom-12 left-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#f03f277a] via-transparent to-transparent"
@@ -77,19 +77,19 @@
                 src="/images/icons/simple-game-architecture.svg"
                 alt="Simple Game Architecture"
               />
-              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
+              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-white-100 text-center">
                 Simple Game Architecture
               </h4>
             </div>
             <!-- Fast & Secure -->
             <div
-              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-56 lg:ml-80 shadow-xl lg:shadow-2xl bg-gradient-to-br from-tashi-smoke via-tashi-ash to-tashi-white-100"
+              class="lg:absolute flex flex-col h-32 w-48 sm:h-40 sm:w-56 items-center justify-center rounded-2xl lg:mt-56 lg:ml-80 shadow-xl lg:shadow-2xl card-green"
             >
               <div
                 class="hidden lg:block lg:absolute bottom-12 left-12 rounded-full opacity-60 h-64 w-64 bg-gradient-radial from-[#31f5997a] via-transparent to-transparent"
               ></div>
               <img class="scale-50 sm:scale-75" src="/images/icons/fast-and-secure.svg" alt="Fast & Secure" />
-              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-primary text-center">
+              <h4 class="sm:mt-4 font-poppins font-medium text-sm sm:text-base text-tashi-white-100 text-center">
                 Fast & Secure
               </h4>
             </div>

@@ -27,7 +27,7 @@ scene.add(pointLight2)
 scene.add(new AmbientLight(0xff68ff))
 
 const camera = new PerspectiveCamera(55, aspectRatio.value, 0.1, 1000)
-camera.position.set(7, 7, 7)
+camera.position.set(8, 4, 8)
 scene.add(camera)
 
 const dracoLoader = new DRACOLoader()
@@ -39,7 +39,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 let model: any
 gltfLoader.load('tashi-earth/earth.gltf', gltf => {
   model = gltf.scene
-
+  model.position.set(0, 0, 0)
   scene.add(model)
 })
 

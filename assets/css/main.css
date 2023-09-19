@@ -17,7 +17,7 @@
 
 @layer utilities {
   .tashi-nav-link {
-    @apply font-poppins font-normal text-lg text-tashi-contrast-50 transition-colors delay-150 hover:text-tashi-white-100 hover:delay-[0ms];
+    @apply font-poppins font-normal text-lg text-tashi-white-100 transition-colors delay-150 hover:text-tashi-contrast-100 hover:delay-[0ms];
   }
 
   .tashi-nav-social-media {
@@ -25,7 +25,7 @@
   }
 
   .tashi-nav-link-mobile {
-    @apply font-poppins text-base leading-8 tracking-tight text-tashi-contrast-50 transition-colors delay-150 hover:text-tashi-white-100 hover:delay-[0ms];
+    @apply font-poppins text-base leading-8 tracking-tight text-tashi-white-100 transition-colors delay-150 hover:text-tashi-contrast-100 hover:delay-[0ms];
   }
 
   .tashi-nav-link-footer {
@@ -214,4 +214,28 @@
 
 .mask {
   filter: drop-shadow(0 0 2rem rgb(207, 1, 242));
+}
+
+.card-orange {
+  border-radius: 10px;
+  background: linear-gradient(133deg, #f3a241 18.92%, #fe5b15 108.36%);
+}
+
+.card-green {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #01de9d 0%, #1196ba 100%);
+
+  filter: drop-shadow(0 0 2rem rgb(3, 211, 162));
+}
+
+.card-yellow {
+  border-radius: 10px;
+  background: linear-gradient(137deg, #f8bd52 31.04%, #a7cf8f 121.84%);
+  filter: drop-shadow(0 0 2rem rgb(248, 189, 82));
+}
+
+.card-blue {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #06d3ff 0%, #1978e8 100%);
+  filter: drop-shadow(0 0 2rem rgb(6, 211, 255));
 }
