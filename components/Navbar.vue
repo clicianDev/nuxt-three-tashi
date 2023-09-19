@@ -6,7 +6,7 @@
         <!-- LOGO -->
         <div class="relative z-10">
           <a aria-label="Home" href="/">
-            <img class="mx-auto h-12" src="images/logos/logo.svg" type="image/svg+xml" alt="Logo" />
+            <img class="mx-auto h-12" src="/images/logos/logo.svg" type="image/svg+xml" alt="Logo" />
           </a>
         </div>
         <div class="flex items-center gap-16">
@@ -39,14 +39,14 @@
                 <img
                   id="navbar-toggle-expand"
                   class="h-8 w-8"
-                  src="images/icons/menu-expand.svg"
+                  src="/images/icons/menu-expand.svg"
                   type="image/svg+xml"
                   alt="Show Menu"
                 />
                 <img
                   id="navbar-toggle-collapse"
                   class="hidden h-8 w-8"
-                  src="images/icons/menu-collapse.svg"
+                  src="/images/icons/menu-collapse.svg"
                   type="image/svg+xml"
                   alt="Hide Menu"
                 />
@@ -78,22 +78,22 @@
                     href="https://www.linkedin.com/company/tashigg"
                     target="_blank"
                   >
-                    <img src="images/logos/social/linkedin.svg" alt="LinkedIn" />
+                    <img src="/images/logos/social/linkedin.svg" alt="LinkedIn" />
                   </a>
                   <a class="lg:block tashi-nav-social-media" href="https://discord.gg/fPNdgUCGnk" target="_blank">
-                    <img src="images/logos/social/discord.svg" alt="Discord" />
+                    <img src="/images/logos/social/discord.svg" alt="Discord" />
                   </a>
                   <a class="lg:block tashi-nav-social-media" href="https://www.reddit.com/user/tashigg" target="_blank">
-                    <img src="images/logos/social/reddit.svg" alt="Reddit" />
+                    <img src="/images/logos/social/reddit.svg" alt="Reddit" />
                   </a>
                   <a class="lg:block tashi-nav-social-media" href="https://twitter.com/tashiggofficial" target="_blank">
-                    <img src="images/logos/social/twitter.svg" alt="Twitter" />
+                    <img src="/images/logos/social/twitter.svg" alt="Twitter" />
                   </a>
                   <a class="lg:block tashi-nav-social-media" href="https://medium.com/tashi-gg" target="_blank">
-                    <img src="images/logos/social/medium.svg" alt="Medium" />
+                    <img src="/images/logos/social/medium.svg" alt="Medium" />
                   </a>
                   <!-- <a class="lg:block tashi-nav-social-media" href="https://dev.to/tashigg" target="_blank">
-                          <img src="images/logos/social/dev.svg" alt="Dev.to" />
+                          <img src="/images/logos/social/dev.svg" alt="Dev.to" />
                         </a> -->
                 </div>
               </div>
@@ -104,30 +104,30 @@
               href="https://www.linkedin.com/company/tashigg"
               target="_blank"
             >
-              <img src="images/logos/social/linkedin.svg" alt="LinkedIn" />
+              <img src="/images/logos/social/linkedin.svg" alt="LinkedIn" />
             </a>
             <a class="hidden lg:block tashi-nav-social-media" href="https://discord.gg/fPNdgUCGnk" target="_blank">
-              <img src="images/logos/social/discord.svg" alt="Discord" />
+              <img src="/images/logos/social/discord.svg" alt="Discord" />
             </a>
             <a
               class="hidden lg:block tashi-nav-social-media"
               href="https://www.reddit.com/user/tashigg"
               target="_blank"
             >
-              <img src="images/logos/social/reddit.svg" alt="Reddit" />
+              <img src="/images/logos/social/reddit.svg" alt="Reddit" />
             </a>
             <a
               class="hidden lg:block tashi-nav-social-media"
               href="https://twitter.com/tashiggofficial"
               target="_blank"
             >
-              <img src="images/logos/social/twitter.svg" alt="Twitter" />
+              <img src="/images/logos/social/twitter.svg" alt="Twitter" />
             </a>
             <a class="hidden lg:block tashi-nav-social-media" href="https://medium.com/tashi-gg" target="_blank">
-              <img src="images/logos/social/medium.svg" alt="Medium" />
+              <img src="/images/logos/social/medium.svg" alt="Medium" />
             </a>
             <!-- <a class="hidden lg:block tashi-nav-social-media" href="https://dev.to/tashigg" target="_blank">
-                  <img src="images/logos/social/dev.svg" alt="Dev" />
+                  <img src="/images/logos/social/dev.svg" alt="Dev" />
                 </a> -->
           </div>
         </div>
