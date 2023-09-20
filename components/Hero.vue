@@ -1,7 +1,7 @@
 <template>
   <section class="h-3/4">
     <div class="p-20 w-1/2 mt-20 absolute">
-      <p class="text-tashi-primary text-3xl">Faster. Cheaper. Fairer.</p>
+      <p class="text-tashi-primary text-3xl button">Faster. Cheaper. Fairer.</p>
       <h1 class="text-6xl text-white my-5">Introducing Mesh Multiplayer Gaming</h1>
       <div>
         <a
