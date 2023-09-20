@@ -104,6 +104,7 @@ let model: any
 gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
   model = gltf.scene
   position = model.position.set(-4, 2.5, 2)
+  model.receiveShadow = false
   scene.add(model)
   mixer = new AnimationMixer(model)
   const clips = gltf.animations
@@ -124,7 +125,7 @@ function updateRenderer() {
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: true })
+    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: false })
 
     // const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 1.5, 0.1, 0.1)
     // bloomPass.threshold = params.threshold
@@ -139,8 +140,7 @@ function setRenderer() {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.enableZoom = false
-    controls.enableRotate = false
-
+    controls.enableRotate = true
     updateRenderer()
   }
 }
@@ -198,7 +198,6 @@ const animationLoop = () => {
 </script>
 <template>
   <div>
-    <div class="glow-cyan p-10 absolute w-1/3 h-1/3 left-1/2 top-1/2">aaa</div>
     <canvas ref="experience" />
   </div>
 </template>

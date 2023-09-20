@@ -90,7 +90,6 @@ const animationLoop = () => {
   controls.update()
   updateRenderer()
   requestAnimationFrame(animationLoop)
-  console.log('earth', camera.position)
   model.rotation.y += 0.01
 }
 </script>
