@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { useWindowSize } from '@vueuse/core'
+import MapData from './MapData.json'
 
 let renderer: WebGLRenderer
 let controls: OrbitControls

@@ -1,0 +1,22 @@
+[
+  {
+    "country": "New York",
+    "ping": "10"
+  },
+  {
+    "country": "Paris",
+    "ping": "72"
+  },
+  {
+    "country": "San Francisco",
+    "ping": "70"
+  },
+  {
+    "country": "Singapore",
+    "ping": "234"
+  },
+  {
+    "country": "Tokyo",
+    "ping": "176"
+  }
+]

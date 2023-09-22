@@ -17,6 +17,7 @@ import {
   Vector2,
   PointLight,
   LinearToneMapping,
+  ReinhardToneMapping,
 } from 'three'
 
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
@@ -25,6 +26,8 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js'
+
 import { Ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 
@@ -56,7 +59,6 @@ const z = -2.8261805545029453
 const camera = new PerspectiveCamera(75, aspectRatio.value, 0.1, 1000)
 camera.position.set(x, y, z)
 scene.add(camera)
-const renderScene = new RenderPass(scene, camera)
 
 const loader = new TextureLoader()
 const cross = loader.load('/cross.png')
@@ -125,17 +127,21 @@ function updateRenderer() {
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: false })
+    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: true })
+    const renderScene = new RenderPass(scene, camera)
+    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 1.5, 0.1, 0.1)
+    bloomPass.threshold = params.threshold
+    bloomPass.strength = params.strength
+    bloomPass.radius = params.radius
 
-    // const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 1.5, 0.1, 0.1)
-    // bloomPass.threshold = params.threshold
-    // bloomPass.strength = params.strength
-    // bloomPass.radius = params.radius
+    const outputPass = new OutputPass()
 
-    // composer = new EffectComposer(renderer)
-    // composer.addPass(renderScene)
-    // composer.addPass(bloomPass)
+    composer = new EffectComposer(renderer)
+    composer.addPass(renderScene)
+    composer.addPass(bloomPass)
+    composer.addPass(outputPass)
 
+    renderer.toneMapping = ReinhardToneMapping
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
@@ -170,8 +176,7 @@ function animateParticles(event: any) {
 const animationLoop = () => {
   // Calculate delta time since the last frame
 
-  // composer.render()
-
+  composer.render()
   const delta = clock.getDelta()
   const elapsedTime = clock.getElapsedTime()
 
