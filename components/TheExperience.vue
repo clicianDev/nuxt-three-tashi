@@ -26,7 +26,8 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
-
+// @ts-ignore
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass'
 import { Ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 
@@ -102,10 +103,9 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 let model: any
-gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
+gltfLoader.load('tashi-server.glb', gltf => {
   model = gltf.scene
   position = model.position.set(-4, 2.5, 2)
-  model.receiveShadow = false
   scene.add(model)
   mixer = new AnimationMixer(model)
   const clips = gltf.animations
@@ -122,6 +122,7 @@ function updateCamera() {
 function updateRenderer() {
   renderer.setSize(width.value, height.value)
   renderer.render(scene, camera)
+  composer.setSize(width, height)
 }
 
 function setRenderer() {
@@ -133,11 +134,16 @@ function setRenderer() {
     bloomPass.strength = params.strength
     bloomPass.radius = params.radius
 
+    const outputPass = new OutputPass()
+
     composer = new EffectComposer(renderer)
     composer.addPass(renderScene)
     composer.addPass(bloomPass)
+    composer.addPass(outputPass)
 
     renderer.toneMapping = ReinhardToneMapping
+    renderer.toneMappingExposure = Math.pow(1, 4.0)
+
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
