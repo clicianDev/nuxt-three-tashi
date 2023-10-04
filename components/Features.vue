@@ -3,10 +3,10 @@
     <div class="flex flex-col items-center justify-center max-w-7xl mx-auto">
       <div class="flex flex-row text-center">
         <p
-          class="px-4 font-poppins font-semibold tracking-wide text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-tashi-black"
+          class="px-4 font-poppins font-semibold tracking-wide text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-tashi-white-100"
         >
           FASTER. CHEAPER. FAIRER. =<span
-            class="ml-4 font-poppins font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-tashi-primary"
+            class="ml-4 font-poppins font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-tashi-cyan"
             >Free Cash Flow</span
           >
         </p>

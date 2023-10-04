@@ -26,7 +26,6 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
-import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js'
 
 import { Ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
@@ -134,12 +133,9 @@ function setRenderer() {
     bloomPass.strength = params.strength
     bloomPass.radius = params.radius
 
-    const outputPass = new OutputPass()
-
     composer = new EffectComposer(renderer)
     composer.addPass(renderScene)
     composer.addPass(bloomPass)
-    composer.addPass(outputPass)
 
     renderer.toneMapping = ReinhardToneMapping
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))

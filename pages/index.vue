@@ -8,5 +8,6 @@
 
     <Info />
     <Map />
+    <Features />
   </div>
 </template>

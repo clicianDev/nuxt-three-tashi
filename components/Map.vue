@@ -33,14 +33,7 @@
             </a>
           </div>
           <!-- GRAPH -->
-          <div
-            class="flex flex-col items-center xs:overflow-visible xs:relative -mt-8 xs:-mt-20 md:mt-16 lg:mt-20 md:flex-row lg:flex-col xs:col-span-4 xs:row-span-2 lg:items-baseline xs:gap-3 md:gap-6"
-          >
-            <img
-              class="scale-100 h-64 xs:h-full rotate-90 xs:rotate-0 xs:scale-50 md:scale-75 lg:scale-90 xl:scale-100"
-              src="/images/tce/tce-graph.svg"
-            />
-          </div>
+          <div></div>
         </div>
       </div>
     </div>
