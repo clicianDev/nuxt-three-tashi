@@ -7,7 +7,7 @@
     <About />
 
     <Info />
-    <Map />
+    <!-- <Map /> -->
     <Features />
   </div>
 </template>

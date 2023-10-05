@@ -37,7 +37,7 @@ let mixer: any
 let position: any
 let composer: any
 const params = {
-  threshold: 0.8,
+  threshold: 0,
   strength: 1,
   radius: 1,
   exposure: 1,
@@ -49,8 +49,6 @@ const { width, height } = useWindowSize()
 const aspectRatio = computed(() => width.value / height.value)
 
 const scene = new Scene()
-scene.fog = new FogExp2(0x0000ff, 0.001)
-scene.add(new AmbientLight(0xff68ff))
 
 //camera
 const x = -8.411034952096102
@@ -65,6 +63,7 @@ const cross = loader.load('/cross.png')
 
 //lights
 const directionalLight = new DirectionalLight(0xffffff, 2)
+
 scene.add(directionalLight)
 
 const pointLight = new PointLight(0x11f2ff, 2)
@@ -87,7 +86,7 @@ for (let i = 0; i < particlesCount * 3; i++) {
 particlesGeometry.setAttribute('position', new BufferAttribute(posArray, 3))
 
 const materials = new PointsMaterial({
-  size: 2.5,
+  size: 1,
   map: cross,
   transparent: true,
 })
@@ -103,7 +102,7 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 let model: any
-gltfLoader.load('tashi-server.glb', gltf => {
+gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
   model = gltf.scene
   position = model.position.set(-4, 2.5, 2)
   scene.add(model)
@@ -122,17 +121,20 @@ function updateCamera() {
 function updateRenderer() {
   renderer.setSize(width.value, height.value)
   renderer.render(scene, camera)
-  composer.setSize(width, height)
+  composer.setSize(width.value, height.value)
 }
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: true })
+    renderer = new WebGLRenderer({
+      canvas: experience.value,
+      alpha: true,
+      antialias: true,
+      preserveDrawingBuffer: false,
+      logarithmicDepthBuffer: true,
+    })
     const renderScene = new RenderPass(scene, camera)
-    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 1.5, 0.1, 0.1)
-    bloomPass.threshold = params.threshold
-    bloomPass.strength = params.strength
-    bloomPass.radius = params.radius
+    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 0.1, 0.1, 0.1)
 
     const outputPass = new OutputPass()
 
@@ -148,7 +150,7 @@ function setRenderer() {
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.enableZoom = false
-    controls.enableRotate = true
+    controls.enableRotate = false
     updateRenderer()
   }
 }
@@ -178,7 +180,6 @@ function animateParticles(event: any) {
 const animationLoop = () => {
   // Calculate delta time since the last frame
 
-  composer.render()
   const delta = clock.getDelta()
   const elapsedTime = clock.getElapsedTime()
 
@@ -199,7 +200,9 @@ const animationLoop = () => {
   }
 
   controls.update()
+
   updateRenderer()
+  composer.render()
   requestAnimationFrame(animationLoop)
 }
 </script>
