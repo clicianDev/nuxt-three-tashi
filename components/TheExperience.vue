@@ -51,9 +51,9 @@ const aspectRatio = computed(() => width.value / height.value)
 const scene = new Scene()
 
 //camera
-const x = -8.411034952096102
-const y = 7.221221819001871
-const z = -2.8261805545029453
+const x = -37.68983166466052
+const y = 93.52576546128967
+const z = -24.431681355388086
 const camera = new PerspectiveCamera(75, aspectRatio.value, 0.1, 1000)
 camera.position.set(x, y, z)
 scene.add(camera)
@@ -66,7 +66,7 @@ const directionalLight = new DirectionalLight(0xffffff, 2)
 
 scene.add(directionalLight)
 
-const pointLight = new PointLight(0x11f2ff, 2)
+const pointLight = new PointLight(0x11f2ff, 500)
 pointLight.position.set(0, 5, 0)
 const pointLight2 = new PointLight(0xf03fff, 500)
 pointLight2.position.set(0, 10, 0)
@@ -134,7 +134,7 @@ function setRenderer() {
       logarithmicDepthBuffer: true,
     })
     const renderScene = new RenderPass(scene, camera)
-    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 0.1, 0.1, 0.1)
+    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 0.08, 0.5, 0.5)
 
     const outputPass = new OutputPass()
 
@@ -149,8 +149,8 @@ function setRenderer() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
-    controls.enableZoom = false
-    controls.enableRotate = false
+    controls.enableZoom = true
+    controls.enableRotate = true
     updateRenderer()
   }
 }
@@ -193,7 +193,7 @@ const animationLoop = () => {
   // if (mouseX > 0 || mouseY > 0) {
   //   model.rotation.y = -mouseY * (elapsedTime * 0.00001)
   // }
-
+  console.log(camera.position)
   // Update the animation mixer with the delta time
   if (mixer) {
     mixer.update(delta)
