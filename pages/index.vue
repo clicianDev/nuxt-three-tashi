@@ -2,6 +2,7 @@
 <template>
   <div class="page">
     <Navbar />
+
     <Hero />
     <Partners />
     <About />

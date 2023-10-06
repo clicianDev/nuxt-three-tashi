@@ -2,7 +2,7 @@
   <header>
     <!-- NAVBAR -->
     <nav>
-      <div class="relative max-w-7xl z-50 mx-auto flex justify-between px-4 py-8 sm:px-6 lg:px-8">
+      <div class="absolute w-full z-50 mx-auto flex justify-between px-4 py-8 sm:px-6 lg:px-8">
         <!-- LOGO -->
         <div class="relative z-10">
           <a aria-label="Home" href="/">
