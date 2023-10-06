@@ -1,5 +1,20 @@
 <script setup lang="ts">
-import { Scene, PerspectiveCamera, WebGLRenderer, DirectionalLight, AmbientLight, PointLight } from 'three'
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
+  DirectionalLight,
+  AmbientLight,
+  PointLight,
+  Vector2,
+  ReinhardToneMapping,
+} from 'three'
+
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
+// @ts-ignore
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
@@ -8,6 +23,7 @@ import MapData from './MapData.json'
 
 let renderer: WebGLRenderer
 let controls: OrbitControls
+let composer: any
 const experience = ref<HTMLCanvasElement | null>(null)
 
 const { width, height } = useWindowSize()
@@ -52,20 +68,31 @@ function updateCamera() {
 function updateRenderer() {
   renderer.setSize(width.value, height.value)
   renderer.render(scene, camera)
+  composer.setSize(width.value, height.value)
 }
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true, antialias: true })
+    renderer = new WebGLRenderer({
+      canvas: experience.value,
+      alpha: true,
+      antialias: true,
+      preserveDrawingBuffer: false,
+      logarithmicDepthBuffer: true,
+    })
 
-    // const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 1.5, 0.1, 0.1)
-    // bloomPass.threshold = params.threshold
-    // bloomPass.strength = params.strength
-    // bloomPass.radius = params.radius
+    const renderScene = new RenderPass(scene, camera)
+    const bloomPass = new UnrealBloomPass(new Vector2(window.innerWidth, window.innerHeight), 0.08, 0.5, 0.5)
 
-    // composer = new EffectComposer(renderer)
-    // composer.addPass(renderScene)
-    // composer.addPass(bloomPass)
+    const outputPass = new OutputPass()
+
+    composer = new EffectComposer(renderer)
+    composer.addPass(renderScene)
+    composer.addPass(bloomPass)
+    composer.addPass(outputPass)
+
+    renderer.toneMapping = ReinhardToneMapping
+    renderer.toneMappingExposure = Math.pow(1, 4.0)
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     controls = new OrbitControls(camera, renderer.domElement)
@@ -90,8 +117,8 @@ onMounted(() => {
 const animationLoop = () => {
   controls.update()
   updateRenderer()
+  composer.render()
   requestAnimationFrame(animationLoop)
-  model.rotation.y += 0.01
 }
 </script>
 <template>

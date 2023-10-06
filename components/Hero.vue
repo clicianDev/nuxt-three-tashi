@@ -1,5 +1,10 @@
+<script>
+// function updateCameraPos() {
+//   return alert('tt')
+// }
+</script>
 <template>
-  <section class="h-3/4">
+  <section class="h-full">
     <div class="p-20 w-1/2 mt-20 absolute">
       <p class="text-tashi-primary text-3xl button">Faster. Cheaper. Fairer.</p>
       <h1 class="text-6xl text-white my-5">Introducing Mesh Multiplayer Gaming</h1>

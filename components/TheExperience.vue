@@ -18,6 +18,7 @@ import {
   PointLight,
   LinearToneMapping,
   ReinhardToneMapping,
+  Vector3,
 } from 'three'
 
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
@@ -36,12 +37,7 @@ let controls: OrbitControls
 let mixer: any
 let position: any
 let composer: any
-const params = {
-  threshold: 0,
-  strength: 1,
-  radius: 1,
-  exposure: 1,
-}
+
 const clock = new Clock()
 const experience = ref<HTMLCanvasElement | null>(null)
 
@@ -57,6 +53,12 @@ const z = -24.431681355388086
 const camera = new PerspectiveCamera(75, aspectRatio.value, 0.1, 1000)
 camera.position.set(x, y, z)
 scene.add(camera)
+
+//camera-lerping
+const targetPosition = new Vector3(-4.615946300296653, 11.418237923140756, -2.96037275028072) // Your initial camera position
+const currentCameraPosition = new Vector3().copy(camera.position)
+const lerpFactor = 0.02 // Adjust this value for the speed of the zoom-in effect
+let zoomInProgress = true // Flag to track if the zoom-in is in progress
 
 const loader = new TextureLoader()
 const cross = loader.load('/cross.png')
@@ -94,13 +96,13 @@ const particlesMesh = new Points(particlesGeometry, materials)
 
 scene.add(particlesMesh)
 
-//server-model
 const dracoLoader = new DRACOLoader()
 dracoLoader.setDecoderConfig({ type: 'js' })
 dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
+//server-model
 let model: any
 gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
   model = gltf.scene
@@ -111,11 +113,18 @@ gltfLoader.load('tashi-server-draco/tashi-server.gltf', gltf => {
   const clip = AnimationClip.findByName(clips, 'Animation')
   const action = mixer.clipAction(clip)
   action.play()
+
+  // Start the zoom-in effect when the model is loaded
+  startZoomIn()
 })
 
 function updateCamera() {
   camera.aspect = aspectRatio.value
   camera.updateProjectionMatrix()
+}
+
+function startZoomIn() {
+  zoomInProgress = true
 }
 
 function updateRenderer() {
@@ -193,14 +202,22 @@ const animationLoop = () => {
   // if (mouseX > 0 || mouseY > 0) {
   //   model.rotation.y = -mouseY * (elapsedTime * 0.00001)
   // }
-  console.log(camera.position)
   // Update the animation mixer with the delta time
   if (mixer) {
     mixer.update(delta)
   }
 
-  controls.update()
+  if (zoomInProgress) {
+    camera.position.lerp(targetPosition, lerpFactor)
+    controls.target.lerp(targetPosition, lerpFactor)
 
+    // Check if the camera is close to the target position
+    if (camera.position.distanceTo(targetPosition) < 0.1) {
+      zoomInProgress = false // Zoom-in is complete
+    }
+  }
+
+  controls.update()
   updateRenderer()
   composer.render()
   requestAnimationFrame(animationLoop)
